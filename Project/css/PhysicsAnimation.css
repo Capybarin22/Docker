@@ -1,0 +1,215 @@
+html,
+body,
+header,
+main,
+footer
+{
+    margin: 0;
+}
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+}
+header,
+footer
+{
+    width: 100%;
+}
+header
+{
+    height: 7%;
+
+    background-color: #d2b48c;
+}
+h3.headerTitle
+{
+    margin: 0;
+    padding: 1% 0 0 0;
+
+    text-align: center;
+}
+main
+{
+    width: 100%;
+    height: 55%;
+}
+div.theoryParametersVisualizationDiv
+{
+    display: flex;
+
+    height: 100%;
+}
+div.theoryDiv
+{
+    width: 57%;
+    height: 100%;
+
+    background-color: #7da9a9;
+}
+h3.theoryTitle
+{
+    margin: 2% 0 0 0;
+}
+summary.AppliancesTitle,
+p.AppliancesText,
+summary.theoryOfTheMethodTitle,
+p.theoryOfTheMethodText
+{
+    margin: 2% 4%;
+}
+div.parametersDiv
+{
+    width: 18%;
+    height: 100%;
+
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    background-color: #7da9a9;
+}
+h3.parametersTitle
+{
+    margin: 3.75% 0 0 0;
+}
+h4.availableParametersTitle,
+h4.measuredParametersTitle,
+h4.сalculatedParametersTitle
+{
+    margin: 2% 0 0 5%;
+}
+p.ballsWeight,
+p.ballsRadius,
+p.VesselRadius,
+p.distanceBetweenLabels
+{
+    width: 75%;
+    margin: 2% 10% 0 7%;
+}
+select.typeOfLiquid
+{
+    width: 95%;
+    margin: 2.5%;
+}
+button.getValues
+{
+    width: 95%;
+    margin: 2.5%;
+}
+div.visualizationDiv
+{
+    width: 35%;
+    height: 100%;
+
+    background-color: #7da9a9;
+}
+h3.visualizationTitle
+{
+    margin: .7% 0 .7% 0;
+}
+div.applianceDiv
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+div.ballDiv
+{
+    position: absolute;
+
+    width: 1%;
+    height: 2%;
+
+    border-radius: 50%;
+    background-color: black;
+}
+div.topOfCylinderDiv
+{
+    width: 15%;
+    height: 10%;
+    margin: 5% 0 0 0;
+
+    border-right: 2px solid black;
+    border-bottom: 3px solid red;
+    border-left: 2px solid black;
+    background-color: lightgray;
+}
+div.middleOfCylinderDiv
+{
+    width: 15%;
+    height: 50%;
+
+    border-right: 2px solid black;
+    border-bottom: 3px solid red;
+    border-left: 2px solid black;
+    background-color: lightgray;
+}
+div.bottomOfCylinderDiv
+{
+    width: 15%;
+    height: 15%;
+
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    background-color: lightgray;
+}
+h3.theoryTitle,
+h3.parametersTitle,
+h3.visualizationTitle
+{
+    text-align: center;
+}
+footer
+{
+    height: 38%;
+}
+h3.footerTableWithResultsTitle
+{
+    margin: 0;
+    padding: 1% 0;
+
+    text-align: center;
+}
+div.varTable
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+}
+div.firstRow,
+div.secondRow,
+div.thirdRow,
+div.fourthRow
+{
+    display: flex;
+
+    width: 100%;
+    height: 25%;
+
+    justify-content: space-around;
+}
+div.varTableCell
+{
+    display: flex;
+
+    width: 100%;
+
+    text-align: center;
+
+    border: 1px solid black;
+}
+p.varTableText
+{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}

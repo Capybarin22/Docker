@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа</title>
+    <link rel="stylesheet" href="../css/PhysicsAnimation.css">
+</head>
+
+<body>
+    <header>
+        <h3 class='headerTitle'>Лабораторная работа №107: "Определение вязкости методом Стокса"</h3>
+    </header>
+    <!-- <nav><p>Левая навигация</p></nav> -->
+    <main>
+        <div class="theoryParametersVisualizationDiv">
+            <div class="theoryDiv">
+                <h3 class="theoryTitle">Теория</h3>
+                <details>
+                    <summary class="AppliancesTitle"><b>Приборы и принадлежности:</b></summary>
+                    <p class="AppliancesText">Стеклянный цилиндр с исследуемой жидкостью, микрометр, секундомер, линейка, шарики</p>
+                </details>
+                <details>
+                    <summary class="theoryOfTheMethodTitle"><b>Теория метода:</b></summary>
+                    <p class="theoryOfTheMethodText">Движение слоев текущей жидкости(газа) относительно друг друга сопровождается трением, которое называют внутренним трением. Посредством внутреннего трения более быстрый слой стремится увлечь за собой более медленный, действуя на него с силой, направленной по течению, а более медленный слой стремится затормозить более быстрый, действуя на него с силой, направленной против течения.</p>
+                </details>
+            </div>
+            <div class="parametersDiv">
+                <h3 class="parametersTitle">Параметры</h3>
+                <p class="ballsRadius">r = 0.175</p>
+                <p class="VesselRadius">R = 5</p>
+                <p class="distanceBetweenLabels">L = 50</p>
+
+                <select class="typeOfLiquid">
+                    <option class="gasoline">Бензин</option>
+                    <option class="water">Вода</option>
+                    <option class="glycerin">Глицерин</option>
+                </select>
+
+                <button class="getValues">Расчитать</button>
+            </div>
+            <div class="visualizationDiv">
+                <h3 class="visualizationTitle">Визуализация</h3>
+
+                <div class="applianceDiv">
+                	<div class="ballDiv"></div>
+                	<div class="topOfCylinderDiv"></div>
+                	<div class="middleOfCylinderDiv"></div>
+                	<div class=bottomOfCylinderDiv></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <nav><p>Правая навигация</p></nav> -->
+    <footer>
+        <h3 class='footerTableWithResultsTitle'>Результаты измерений</h3>
+        <div class="varTable">
+            <div class="firstRow">
+                <div class="varTableCell">
+                    <p class="varTableText">№</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">Rшара(см)</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">Ρшара(г/см)</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">Ρжидкости(г/см)</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">t(с)</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">V(см/с)</p>
+                </div>
+                <div class="varTableCell">
+                    <p class="varTableText">η</p>
+                </div>
+            </div>
+            <div class="secondRow">
+                <div class="varTableCell">
+                    <p class="varTableText">1-ый шар</p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="firstBallRadius"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="firstBallDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="VesselDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="firstBallDistancePassingTime"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="firstBallTheSpeedOfPassingTheDistance"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="firstBallViscosity"></p>
+                </div>
+            </div>
+            <div class="thirdRow">
+                <div class="varTableCell">
+                    <p class="varTableText">2-ой шар</p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="secondBallRadius"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="secondBallDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="VesselDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="secondBallDistancePassingTime"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="secondBallTheSpeedOfPassingTheDistance"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="secondBallViscosity"></p>
+                </div>
+            </div>
+            <div class="fourthRow">
+                <div class="varTableCell">
+                    <p class="varTableText">3-ий шар</p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="thirdBallRadius"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="thirdBallDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="VesselDensity"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="thirdBallDistancePassingTime"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="thirdBallTheSpeedOfPassingTheDistance"></p>
+                </div>
+                <div class="varTableCell">
+                	<p class="varTableText" id="thirdBallViscosity"></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/jQuery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/PhysicsAnimation.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
